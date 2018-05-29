@@ -23,12 +23,14 @@ if(j+1<en)
   quicksort(ar,j+1,en);
 }}
 int main(){
-    int a[10],i;
-    for(i=0;i<10;i++){
+    int n;
+    scanf("%d",&n);
+    int a[n],i;
+    for(i=0;i<n;i++){
         scanf("%d",&a[i]);
     }
-    partition(a,0,9);
-     for(i=0;i<10;i++){
+    partition(a,0,n-1);
+     for(i=0;i<n;i++){
         printf(" %d",a[i]);
     }
     return 0;
