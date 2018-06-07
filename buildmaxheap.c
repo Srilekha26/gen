@@ -7,6 +7,10 @@ void swap(int *a,int *b){
 }
 void maxheap(int*a,int i,int n){
     if(2*i>n) return ;
+    else if(2*i==n) {
+        if(a[i]<a[2*i]) swap(&a[i],&a[2*i]);
+        return ;
+    }
     else{
         maxheap(a,2*i,n);
         maxheap(a,2*i+1,n);
